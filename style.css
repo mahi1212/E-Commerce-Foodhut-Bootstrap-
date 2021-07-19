@@ -15,7 +15,6 @@
     margin-right: 10px;
     margin-left: 10px;
     text-transform: uppercase;
-    border-bottom: 1px solid #ccc;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -57,4 +56,14 @@
     color: #fff;
     border-radius: 68px;
     font-weight: 700;
+}
+
+.trending h1{
+    font-weight: 700;
+} 
+
+.card:hover{
+    box-shadow: -2px -1px 20px -4px #ccc;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.02);
 }
