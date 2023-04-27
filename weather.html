@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <style>
+        body {
+            background: url('https://www.bmc-switzerland.com/media/catalog/category/BMC_Parent_Category_Header_Image_Mountain_All_Mountain_1.jpg');
+            color: #000;
+        }
+
+        .my-style {
+            /* border: 3px dashed skyblue; */
+            border-radius: 10px;
+            padding: 10px;
+            /* box-shadow: 2px 3px 10px 10px rgb(53, 141, 163); */
+        }
+        #show-result{
+            background-color: white;
+            color: #000;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <!------------------ Font Awesome cdn ---------------->
+    <script src="https://kit.fontawesome.com/5b817a8fd6.js" crossorigin="anonymous"></script>
+    <!------------------ Bootstrap5 cdn ------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Header starts here -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Organic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fas fa-hamburger"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" href="index.html#trending">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="index.html#organic">All Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="d-flex text-decoration-none">
+                        <input class="search me-2" type="search" placeholder="Need weather?" disabled
+                            aria-label="Search">
+                        <button class="btn btn0 btn-danger" type="submit">Go</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main start here -->
+    <div class="input-group my-5 w-100 mx-auto container d-flex justify-content-center align-items-center">
+        <input type="text" id="search-input" class="form-control" placeholder="Enter City name "
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick="loadWeather()" id="search-btn" class="btn btn-danger" type="button">Search</button>
+    </div>
+    <div id="show-result" class="text-center w-50 mx-auto py-3 border" style="border-radius: 10px;">
+        <img id="" src="icons/unknown.png" alt="icon">
+        <h2>SEARCH FOR WEATHER WITH A CITY NAME</h2>
+    </div>
+
+    <!------------------ Bootstrap5 JS cdn --------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
+</body>
+
+</html>
